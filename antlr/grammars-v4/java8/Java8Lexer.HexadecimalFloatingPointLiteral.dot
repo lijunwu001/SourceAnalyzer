@@ -1,0 +1,17 @@
+digraph ATN {
+rankdir=LR;
+s172[fontsize=11, label="172", shape=doublecircle, fixedsize=true, width=.6];
+s824[fontsize=11,label="824", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s825[fontsize=11,label="825", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s826[fontsize=11,label="826", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s171[fontsize=11,label="171", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s827[fontsize=11,label="{&rarr;\n827\nd=37|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s828[fontsize=11,label="&larr;\n828", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s171 -> s824 [fontname="Times-Italic", label="&epsilon;"];
+s824 -> s825 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<HexSignificand>", arrowhead = normal];
+s825 -> s827 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<BinaryExponent>", arrowhead = normal];
+s827:p0 -> s826 [fontname="Times-Italic", label="&epsilon;"];
+s827:p1 -> s828 [fontname="Times-Italic", label="&epsilon;"];
+s826 -> s828 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<FloatTypeSuffix>", arrowhead = normal];
+s828 -> s172 [fontname="Times-Italic", label="&epsilon;"];
+}

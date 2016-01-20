@@ -1,0 +1,15 @@
+digraph ATN {
+rankdir=LR;
+s190[fontsize=11, label="190", shape=doublecircle, fixedsize=true, width=.6];
+s881[fontsize=11,label="881", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s882[fontsize=11,label="882", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s883[fontsize=11,label="{&rarr;\n883\nd=45|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s884[fontsize=11,label="&larr;\n884", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s189[fontsize=11,label="189", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s189 -> s883 [fontname="Times-Italic", label="&epsilon;"];
+s883:p0 -> s881 [fontname="Times-Italic", label="&epsilon;"];
+s883:p1 -> s882 [fontname="Times-Italic", label="&epsilon;"];
+s881 -> s884 [fontsize=11, fontname="Courier", arrowsize=.7, label = "~{'\"', '\\'}", arrowhead = normal];
+s882 -> s884 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<EscapeSequence>", arrowhead = normal];
+s884 -> s190 [fontname="Times-Italic", label="&epsilon;"];
+}

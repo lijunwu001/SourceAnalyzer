@@ -1,0 +1,17 @@
+digraph ATN {
+rankdir=LR;
+s166[fontsize=11, label="166", shape=doublecircle, fixedsize=true, width=.6];
+s816[fontsize=11,label="{&rarr;\n816\nd=36|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s817[fontsize=11,label="&larr;\n817", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s818[fontsize=11,label="818", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s819[fontsize=11,label="819", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s165[fontsize=11,label="165", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s815[fontsize=11,label="815", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s165 -> s816 [fontname="Times-Italic", label="&epsilon;"];
+s816:p0 -> s815 [fontname="Times-Italic", label="&epsilon;"];
+s816:p1 -> s817 [fontname="Times-Italic", label="&epsilon;"];
+s815 -> s817 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<Sign>", arrowhead = normal];
+s817 -> s818 [fontname="Times-Italic", label="&epsilon;"];
+s818 -> s819 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<Digits>", arrowhead = normal];
+s819 -> s166 [fontname="Times-Italic", label="&epsilon;"];
+}

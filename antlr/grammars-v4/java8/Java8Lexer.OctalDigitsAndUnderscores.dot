@@ -1,0 +1,17 @@
+digraph ATN {
+rankdir=LR;
+s144[fontsize=11, label="144", shape=doublecircle, fixedsize=true, width=.6];
+s746[fontsize=11,label="746", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s747[fontsize=11,label="&rarr;\n747+", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s748[fontsize=11,label="&larr;\n748", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s749[fontsize=11,label="{749+\nd=22|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s750[fontsize=11,label="750", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s143[fontsize=11,label="143", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s143 -> s747 [fontname="Times-Italic", label="&epsilon;"];
+s747 -> s746 [fontname="Times-Italic", label="&epsilon;"];
+s746 -> s748 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<OctalDigitOrUnderscore>", arrowhead = normal];
+s748 -> s749 [fontname="Times-Italic", label="&epsilon;"];
+s749:p0 -> s747 [fontname="Times-Italic", label="&epsilon;", style="dashed"];
+s749:p1 -> s750 [fontname="Times-Italic", label="&epsilon;"];
+s750 -> s144 [fontname="Times-Italic", label="&epsilon;"];
+}

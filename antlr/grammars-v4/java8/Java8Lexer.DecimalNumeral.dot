@@ -1,0 +1,33 @@
+digraph ATN {
+rankdir=LR;
+s114[fontsize=11, label="114", shape=doublecircle, fixedsize=true, width=.6];
+s672[fontsize=11,label="672", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s673[fontsize=11,label="{&rarr;\n673\nd=6|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s674[fontsize=11,label="&larr;\n674", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s675[fontsize=11,label="675", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s676[fontsize=11,label="676", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s677[fontsize=11,label="677", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s678[fontsize=11,label="{&rarr;\n678\nd=7|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s679[fontsize=11,label="&larr;\n679", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s680[fontsize=11,label="{&rarr;\n680\nd=8|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s681[fontsize=11,label="&larr;\n681", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s113[fontsize=11,label="113", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s670[fontsize=11,label="670", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s671[fontsize=11,label="671", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s113 -> s680 [fontname="Times-Italic", label="&epsilon;"];
+s680:p0 -> s670 [fontname="Times-Italic", label="&epsilon;"];
+s680:p1 -> s671 [fontname="Times-Italic", label="&epsilon;"];
+s670 -> s681 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'0'", arrowhead = normal];
+s671 -> s678 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<NonZeroDigit>", arrowhead = normal];
+s681 -> s114 [fontname="Times-Italic", label="&epsilon;"];
+s678:p0 -> s673 [fontname="Times-Italic", label="&epsilon;"];
+s678:p1 -> s675 [fontname="Times-Italic", label="&epsilon;"];
+s673:p0 -> s672 [fontname="Times-Italic", label="&epsilon;"];
+s673:p1 -> s674 [fontname="Times-Italic", label="&epsilon;"];
+s675 -> s676 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<Underscores>", arrowhead = normal];
+s672 -> s674 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<Digits>", arrowhead = normal];
+s674 -> s679 [fontname="Times-Italic", label="&epsilon;"];
+s676 -> s677 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<Digits>", arrowhead = normal];
+s679 -> s681 [fontname="Times-Italic", label="&epsilon;"];
+s677 -> s679 [fontname="Times-Italic", label="&epsilon;"];
+}

@@ -1,0 +1,27 @@
+digraph ATN {
+rankdir=LR;
+s182[fontsize=11, label="182", shape=doublecircle, fixedsize=true, width=.6];
+s864[fontsize=11,label="864", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s865[fontsize=11,label="865", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s866[fontsize=11,label="{&rarr;\n866\nd=42|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s867[fontsize=11,label="&larr;\n867", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s181[fontsize=11,label="181", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s858[fontsize=11,label="858", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s859[fontsize=11,label="859", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s860[fontsize=11,label="860", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s861[fontsize=11,label="861", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s862[fontsize=11,label="862", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s863[fontsize=11,label="863", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s181 -> s866 [fontname="Times-Italic", label="&epsilon;"];
+s866:p0 -> s858 [fontname="Times-Italic", label="&epsilon;"];
+s866:p1 -> s862 [fontname="Times-Italic", label="&epsilon;"];
+s858 -> s859 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'''", arrowhead = normal];
+s862 -> s863 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'''", arrowhead = normal];
+s859 -> s860 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<SingleCharacter>", arrowhead = normal];
+s863 -> s864 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<EscapeSequence>", arrowhead = normal];
+s860 -> s861 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'''", arrowhead = normal];
+s864 -> s865 [fontsize=11, fontname="Courier", arrowsize=.7, label = "'''", arrowhead = normal];
+s861 -> s867 [fontname="Times-Italic", label="&epsilon;"];
+s865 -> s867 [fontname="Times-Italic", label="&epsilon;"];
+s867 -> s182 [fontname="Times-Italic", label="&epsilon;"];
+}

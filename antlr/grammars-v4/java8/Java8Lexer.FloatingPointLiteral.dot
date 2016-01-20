@@ -1,0 +1,15 @@
+digraph ATN {
+rankdir=LR;
+s158[fontsize=11, label="158", shape=doublecircle, fixedsize=true, width=.6];
+s777[fontsize=11,label="777", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s778[fontsize=11,label="778", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s779[fontsize=11,label="{&rarr;\n779\nd=28|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s780[fontsize=11,label="&larr;\n780", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s157[fontsize=11,label="157", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s157 -> s779 [fontname="Times-Italic", label="&epsilon;"];
+s779:p0 -> s777 [fontname="Times-Italic", label="&epsilon;"];
+s779:p1 -> s778 [fontname="Times-Italic", label="&epsilon;"];
+s777 -> s780 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<DecimalFloatingPointLiteral>", arrowhead = normal];
+s778 -> s780 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<HexadecimalFloatingPointLiteral>", arrowhead = normal];
+s780 -> s158 [fontname="Times-Italic", label="&epsilon;"];
+}

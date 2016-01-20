@@ -1,0 +1,22 @@
+digraph ATN {
+rankdir=LR;
+s140[fontsize=11, label="140", shape=doublecircle, fixedsize=true, width=.6];
+s737[fontsize=11,label="737", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s738[fontsize=11,label="738", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s739[fontsize=11,label="{&rarr;\n739\nd=20|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s740[fontsize=11,label="&larr;\n740", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s741[fontsize=11,label="741", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s742[fontsize=11,label="{&rarr;\n742\nd=21|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s743[fontsize=11,label="&larr;\n743", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s139[fontsize=11,label="139", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s139 -> s737 [fontname="Times-Italic", label="&epsilon;"];
+s737 -> s742 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<OctalDigit>", arrowhead = normal];
+s742:p0 -> s739 [fontname="Times-Italic", label="&epsilon;"];
+s742:p1 -> s743 [fontname="Times-Italic", label="&epsilon;"];
+s739:p0 -> s738 [fontname="Times-Italic", label="&epsilon;"];
+s739:p1 -> s740 [fontname="Times-Italic", label="&epsilon;"];
+s743 -> s140 [fontname="Times-Italic", label="&epsilon;"];
+s738 -> s740 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<OctalDigitsAndUnderscores>", arrowhead = normal];
+s740 -> s741 [fontname="Times-Italic", label="&epsilon;"];
+s741 -> s743 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<OctalDigit>", arrowhead = normal];
+}

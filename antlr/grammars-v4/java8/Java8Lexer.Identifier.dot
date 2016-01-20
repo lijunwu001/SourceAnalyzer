@@ -1,0 +1,21 @@
+digraph ATN {
+rankdir=LR;
+s292[fontsize=11, label="292", shape=doublecircle, fixedsize=true, width=.6];
+s291[fontsize=11,label="291", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1033[fontsize=11,label="1033", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1034[fontsize=11,label="1034", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1035[fontsize=11,label="&rarr;\n1035*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1036[fontsize=11,label="&larr;\n1036", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1037[fontsize=11,label="{1037*\nd=48|{<p0>|<p1>}}", shape=record, fixedsize=false, peripheries=1];
+s1038[fontsize=11,label="1038", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s1039[fontsize=11,label="1039*", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s291 -> s1033 [fontname="Times-Italic", label="&epsilon;"];
+s1033 -> s1037 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<JavaLetter>", arrowhead = normal];
+s1037:p0 -> s1035 [fontname="Times-Italic", label="&epsilon;"];
+s1037:p1 -> s1038 [fontname="Times-Italic", label="&epsilon;"];
+s1035 -> s1034 [fontname="Times-Italic", label="&epsilon;"];
+s1038 -> s292 [fontname="Times-Italic", label="&epsilon;"];
+s1034 -> s1036 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<JavaLetterOrDigit>", arrowhead = normal];
+s1036 -> s1039 [fontname="Times-Italic", label="&epsilon;"];
+s1039 -> s1037 [fontname="Times-Italic", label="&epsilon;", style="dashed"];
+}

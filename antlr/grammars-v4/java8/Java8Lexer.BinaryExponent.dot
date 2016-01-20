@@ -1,0 +1,12 @@
+digraph ATN {
+rankdir=LR;
+s176[fontsize=11, label="176", shape=doublecircle, fixedsize=true, width=.6];
+s842[fontsize=11,label="842", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s843[fontsize=11,label="843", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s844[fontsize=11,label="844", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s175[fontsize=11,label="175", shape=circle, fixedsize=true, width=.55, peripheries=1];
+s175 -> s842 [fontname="Times-Italic", label="&epsilon;"];
+s842 -> s843 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<BinaryExponentIndicator>", arrowhead = normal];
+s843 -> s844 [fontsize=11, fontname="Courier", arrowsize=.7, label = "<SignedInteger>", arrowhead = normal];
+s844 -> s176 [fontname="Times-Italic", label="&epsilon;"];
+}
