@@ -1,15 +1,17 @@
 package sk.wu.lijun.project.bc.tree.oop.treeHierarchy;
 
+import sk.wu.lijun.project.bc.enums.NodeType;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Lijun on 2016-01-21.
  */
-public class TreeNode implements ITreeNode {
+public abstract class TreeNode implements ITreeNode {
     List<ITreeNode> children;
     ITreeNode parent;
-
+    public abstract NodeType getType();
     public TreeNode(){
         children = new ArrayList<>();
     }

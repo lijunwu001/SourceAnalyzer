@@ -17,14 +17,14 @@ public class JavaTreeConverter implements AbstractTreeConverter {
         Logger.getLogger().log("Convering "+tree.getClass().getSimpleName());
         AbstractTreeNode treeNode = null;
         if (tree instanceof JavaParser.CompilationUnitContext) {
-            treeNode = JavaTreeConverterUtils.convertPayload(tree);
+            treeNode = JavaTreeConverterUtils.convertAntlrTreeNode(tree);
         }
 
         for (int i = 0; i < tree.getChildCount(); i++) {
             Tree child = tree.getChild(i);
             Object payload = child.getPayload();
             try {
-                treeNode.addChild(JavaTreeConverterUtils.convertPayload(payload));
+                treeNode.addChild(JavaTreeConverterUtils.convertAntlrTreeNode(payload));
             } catch (UnsupportNodeException e) {
                 Logger.getLogger().log(e.getMessage());
             }

@@ -1,5 +1,7 @@
 package sk.wu.lijun.project.bc.tree.oop;
 
+import sk.wu.lijun.project.bc.enums.NodeType;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +19,11 @@ public class ClassNode extends AbstractModifiableNode {
     public void setParent(ClassNode parent) {
         this.extendsClass = parent;
         ifaces = new ArrayList<InterfaceNode>();
+    }
+
+    @Override
+    public NodeType getType() {
+        return NodeType.CLASS;
     }
 
     public ClassNode getParent() {

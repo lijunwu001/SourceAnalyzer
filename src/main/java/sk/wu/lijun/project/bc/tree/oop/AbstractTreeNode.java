@@ -1,5 +1,6 @@
 package sk.wu.lijun.project.bc.tree.oop;
 
+import sk.wu.lijun.project.bc.enums.NodeType;
 import sk.wu.lijun.project.bc.tree.oop.treeHierarchy.ITreeNode;
 import sk.wu.lijun.project.bc.tree.oop.treeHierarchy.TreeNode;
 
@@ -13,6 +14,10 @@ public class AbstractTreeNode extends TreeNode {
     private String name;
     private List<ITreeNode> children;
     public AbstractTreeNode parent;
+
+    public NodeType getType(){
+        return NodeType.UNKNOWN;
+    }
 
     public AbstractTreeNode(String name) {
         this.name = name;
