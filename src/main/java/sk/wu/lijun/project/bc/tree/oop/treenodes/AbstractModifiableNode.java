@@ -1,4 +1,4 @@
-package sk.wu.lijun.project.bc.tree.oop;
+package sk.wu.lijun.project.bc.tree.oop.treenodes;
 
 import java.util.ArrayList;
 import java.util.List;

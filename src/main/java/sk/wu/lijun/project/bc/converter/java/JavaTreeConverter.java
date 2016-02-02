@@ -5,7 +5,7 @@ import sk.wu.lijun.project.bc.converter.AbstractTreeConverter;
 import sk.wu.lijun.project.bc.converter.exceptions.UnsupportNodeException;
 import sk.wu.lijun.project.bc.log.Logger;
 import sk.wu.lijun.project.bc.parser.antlr.java.JavaParser;
-import sk.wu.lijun.project.bc.tree.oop.AbstractTreeNode;
+import sk.wu.lijun.project.bc.tree.oop.treenodes.AbstractTreeNode;
 
 /**
  * Created by Lijun on 2015-12-19.

@@ -1,4 +1,4 @@
-package sk.wu.lijun.project.bc.tree.oop;
+package sk.wu.lijun.project.bc.tree.oop.treenodes;
 
 import sk.wu.lijun.project.bc.enums.NodeType;
 import sk.wu.lijun.project.bc.tree.oop.treeHierarchy.ITreeNode;

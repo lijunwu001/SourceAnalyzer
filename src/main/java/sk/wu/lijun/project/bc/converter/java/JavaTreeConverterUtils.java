@@ -2,8 +2,8 @@ package sk.wu.lijun.project.bc.converter.java;
 
 import sk.wu.lijun.project.bc.converter.exceptions.UnsupportNodeException;
 import sk.wu.lijun.project.bc.parser.antlr.java.JavaParser;
-import sk.wu.lijun.project.bc.tree.oop.AbstractTreeNode;
-import sk.wu.lijun.project.bc.tree.oop.ClassNode;
+import sk.wu.lijun.project.bc.tree.oop.treenodes.AbstractTreeNode;
+import sk.wu.lijun.project.bc.tree.oop.treenodes.ClassNode;
 
 /**
  * Created by Lijun on 2016-01-20.

@@ -2,7 +2,7 @@ package sk.wu.lijun.project.bc.converter.cpp;
 
 import org.antlr.v4.runtime.tree.Tree;
 import sk.wu.lijun.project.bc.converter.AbstractTreeConverter;
-import sk.wu.lijun.project.bc.tree.oop.AbstractTreeNode;
+import sk.wu.lijun.project.bc.tree.oop.treenodes.AbstractTreeNode;
 
 /**
  * Created by Lijun on 2015-12-19.
