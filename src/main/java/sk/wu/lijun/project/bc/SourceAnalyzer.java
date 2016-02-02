@@ -18,8 +18,8 @@ public class SourceAnalyzer {
     private final SourceAnalyzerConfig config;
     private Parser parser;
 
-    public SourceAnalyzer(SourceAnalyzerConfig config){
-        this.config = config;
+    public SourceAnalyzer(){
+        this.config = SourceAnalyzerConfig.getConfiguration();
     }
 
     public Tree parse(){

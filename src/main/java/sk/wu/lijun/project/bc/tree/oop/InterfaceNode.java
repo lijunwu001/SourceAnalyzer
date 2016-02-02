@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by Lijun on 2015-12-19.
  */
-public class InterfaceNode extends AbstractTreeNode {
+public class InterfaceNode extends AbstractModifiableNode {
     List<InterfaceNode> extendsIfaces;
     public InterfaceNode(String name) {
         super(name);

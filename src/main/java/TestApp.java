@@ -16,20 +16,20 @@ public class TestApp {
             SourceAnalyzerConfig config = SourceAnalyzerConfig.getConfiguration();
             config.setInputFile("E:\\Temp\\Test.java");
             config.setLanguage(SourceLanguage.JAVA);
-            SourceAnalyzer analyzer = new SourceAnalyzer(config);
+            SourceAnalyzer analyzer = new SourceAnalyzer();
             Tree tree = analyzer.parse();
             new JavaTreeConverter().convert(tree);
             System.out.println(tree.toStringTree());
 
             config.setInputFile("E:\\Temp\\Test.cpp");
             config.setLanguage(SourceLanguage.CPP);
-            analyzer = new SourceAnalyzer(config);
+            analyzer = new SourceAnalyzer();
             tree = analyzer.parse();
             new JavaTreeConverter().convert(tree);
             System.out.println(tree.toStringTree());
 
             config.setLanguage(SourceLanguage.PHP);
-            analyzer = new SourceAnalyzer(config);
+            analyzer = new SourceAnalyzer();
             tree = analyzer.parse();
             System.out.println(tree.toStringTree());
 
