@@ -1,13 +1,16 @@
 package sk.wu.lijun.project.bc.tree.oop.treenodes;
 
 import sk.wu.lijun.project.bc.enums.NodeType;
-import sk.wu.lijun.project.bc.tree.oop.treeHierarchy.TreeNode;
 
 /**
  * Created by Lijun on 2016-01-21.
  */
-public class FileNode extends TreeNode {
-    String filePath;
+public class FileNode extends AbstractTreeNode {
+    private String filePath;
+    public FileNode(String filePath){
+        super(null);
+        this.filePath = filePath;
+    }
 
     @Override
     public NodeType getType() {

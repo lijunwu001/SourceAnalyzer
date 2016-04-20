@@ -12,22 +12,18 @@ public class ClassNode extends AbstractModifiableNode {
     private ClassNode extendsClass;
     private List<InterfaceNode> ifaces;
     private List<FieldNode> fields;
+    private List<MethodNode> methods;
+
     public ClassNode(String name) {
         super(name);
-    }
-
-    public void setParent(ClassNode parent) {
-        this.extendsClass = parent;
-        ifaces = new ArrayList<InterfaceNode>();
+        ifaces = new ArrayList<>();
+        fields = new ArrayList<>();
+        methods = new ArrayList<>();
     }
 
     @Override
     public NodeType getType() {
         return NodeType.CLASS;
-    }
-
-    public ClassNode getParent() {
-        return extendsClass;
     }
 
     public List<InterfaceNode> getIfaces() {
@@ -39,5 +35,13 @@ public class ClassNode extends AbstractModifiableNode {
     }
     public void addIface(InterfaceNode iface){
         this.ifaces.add(iface);
+    }
+
+    public void addField(FieldNode fieldNode){
+        this.fields.add(fieldNode);
+    }
+
+    public void addMethod(MethodNode method) {
+        this.methods.add(method);
     }
 }

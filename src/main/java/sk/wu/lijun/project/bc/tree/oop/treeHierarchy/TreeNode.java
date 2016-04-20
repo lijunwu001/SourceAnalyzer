@@ -31,6 +31,10 @@ public abstract class TreeNode implements ITreeNode {
         return parent;
     }
 
+    public void setParent(ITreeNode parent){
+        this.parent = parent;
+    }
+
     @Override
     public ITreeNode getChild(int i) {
         return children.size() > i ? children.get(i) : null;

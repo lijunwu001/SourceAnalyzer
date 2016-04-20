@@ -17,6 +17,10 @@ public class AbstractModifiableNode extends AbstractTreeNode {
         return modifiers;
     }
 
+    public void setModifiers(List<String> modifiers){
+        this.modifiers = modifiers;
+    }
+
     public void addModifier(String modifier){
         modifiers.add(modifier);
     }
