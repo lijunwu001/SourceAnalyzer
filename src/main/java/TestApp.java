@@ -4,6 +4,8 @@ import sk.wu.lijun.project.bc.converter.java.JavaTreeConverter;
 import sk.wu.lijun.project.bc.enums.SourceLanguage;
 import sk.wu.lijun.project.bc.log.Logger;
 import sk.wu.lijun.project.bc.parser.SourceAnalyzerConfig;
+import sk.wu.lijun.project.bc.persistence.PersistenceUnit;
+import sk.wu.lijun.project.bc.tree.oop.treenodes.AbstractTreeNode;
 
 /**
  * Created by Lijun on 2015-12-19.
@@ -18,7 +20,8 @@ public class TestApp {
             config.setLanguage(SourceLanguage.JAVA);
             SourceAnalyzer analyzer = new SourceAnalyzer();
             Tree tree = analyzer.parse();
-            new JavaTreeConverter().convert(tree);
+            AbstractTreeNode node = new JavaTreeConverter().convert(tree);
+            new PersistenceUnit().save(node);
             System.out.println(tree.toStringTree());
 
             config.setInputFile("E:\\Temp\\Test.cpp");
