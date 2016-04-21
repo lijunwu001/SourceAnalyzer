@@ -12,12 +12,11 @@ import java.util.List;
 @Table(name = "CLASS_NODE")
 public class ClassNode extends AbstractModifiableNode {
 
-    @OneToOne(mappedBy = "extendsClass")
     @Column(name="EXTEND_CLASS")
-    private ClassNode extendsClass;
+    private String extendsClass;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "classNode")
-    private List<InterfaceNode> ifaces;
+    private List<String> ifaces;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "classNode")
     private List<FieldNode> fields;
@@ -37,14 +36,15 @@ public class ClassNode extends AbstractModifiableNode {
         return NodeType.CLASS;
     }
 
-    public List<InterfaceNode> getIfaces() {
+    public List<String> getIfaces() {
         return ifaces;
     }
 
-    public void setIfaces(List<InterfaceNode> ifaces) {
+    public void setIfaces(List<String> ifaces) {
         this.ifaces = ifaces;
     }
-    public void addIface(InterfaceNode iface){
+
+    public void addIface(String iface){
         this.ifaces.add(iface);
     }
 
@@ -54,5 +54,13 @@ public class ClassNode extends AbstractModifiableNode {
 
     public void addMethod(MethodNode method) {
         this.methods.add(method);
+    }
+
+    public String getExtendsClass() {
+        return extendsClass;
+    }
+
+    public void setExtendsClass(String extendsClass) {
+        this.extendsClass = extendsClass;
     }
 }

@@ -14,17 +14,20 @@ public class TestApp {
     public static void main(String[] args) {
         try {
             Logger logger = Logger.getLogger();
-            logger.setLogFile("E:\\Temp\\log.txt");
+            logger.setLogFile(getResource("logs/log.txt"));
+
             SourceAnalyzerConfig config = SourceAnalyzerConfig.getConfiguration();
-            config.setInputFile("E:\\Temp\\Test.java");
+            config.setInputFile(getResource("testInput/Test.java"));
             config.setLanguage(SourceLanguage.JAVA);
             SourceAnalyzer analyzer = new SourceAnalyzer();
             Tree tree = analyzer.parse();
             AbstractTreeNode node = new JavaTreeConverter().convert(tree);
+
             new PersistenceUnit().save(node);
+
             System.out.println(tree.toStringTree());
 
-            config.setInputFile("E:\\Temp\\Test.cpp");
+            config.setInputFile("testInput/Test.cpp");
             config.setLanguage(SourceLanguage.CPP);
             analyzer = new SourceAnalyzer();
             tree = analyzer.parse();
@@ -39,5 +42,8 @@ public class TestApp {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    private static String getResource(String s){
+        return TestApp.class.getClassLoader().getResource(s).getFile();
     }
 }

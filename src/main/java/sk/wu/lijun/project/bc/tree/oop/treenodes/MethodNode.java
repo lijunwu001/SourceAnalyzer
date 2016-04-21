@@ -10,8 +10,24 @@ import java.util.List;
 public class MethodNode extends AbstractModifiableNode {
     private List<FormalParameter> formalParameters;
     private String returnType;
-    List<StatementNode> statements;
+    private List<StatementNode> statements;
     public MethodNode(String name) {
         super(name);
+    }
+
+    public void setFormalParameters(List<FormalParameter> formalParameters) {
+        this.formalParameters = formalParameters;
+    }
+
+    public List<FormalParameter> getFormalParameters() {
+        return formalParameters;
+    }
+
+    public String getReturnType() {
+        return returnType;
+    }
+
+    public void setReturnType(String returnType) {
+        this.returnType = returnType;
     }
 }
