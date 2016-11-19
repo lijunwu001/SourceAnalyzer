@@ -7,7 +7,6 @@ import sk.wu.lijun.project.bc.parser.antlr.java.JavaParser;
 import sk.wu.lijun.project.bc.tree.oop.FormalParameter;
 import sk.wu.lijun.project.bc.tree.oop.treenodes.*;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 

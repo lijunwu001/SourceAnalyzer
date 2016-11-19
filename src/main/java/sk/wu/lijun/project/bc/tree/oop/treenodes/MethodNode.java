@@ -9,6 +9,7 @@ import java.util.List;
  */
 public class MethodNode extends AbstractModifiableNode {
     private List<FormalParameter> formalParameters;
+    private List<VariableNode> localVariable;
     private String returnType;
     private List<StatementNode> statements;
     public MethodNode(String name) {
